@@ -1,2 +1,2 @@
-Hello Worlid
-Wlcome to devops class
+Hello World
+Wlcome to devops 2518 class
