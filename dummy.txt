@@ -1,2 +1,2 @@
 hello all
-welcome to devops 2518 class
+welcome to devops 2518 
