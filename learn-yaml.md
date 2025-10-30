@@ -70,3 +70,50 @@ jobDescription: |
 output:
   Req 3 years of cloud devops engg. he/she should have exp with kubernetes. he/she should be able to lead the Team.
 ```
+----------------------------------------------------------
+# YAML Example 
+```yaml
+# Learners Data
+learners:
+  learner1:
+    name: murali   # dictionary type - learners.learner1.name
+    age: 30        # integer
+    email: "muralialakunlta3@gmail.com" # string
+    isCourseCompleted: false  # boolean
+    height: 5.8   # flot
+    isEmployed: null   # Null
+    courses_enrolled:  # array
+      - aws
+      - devops
+      - azure 
+  learner2:
+    name: krishna   # dictionary type - learners.leraner2.name
+    age: 30        # integer
+    email: "krishnaalakunlta3@gmail.com" # string
+    isCourseCompleted: false  # boolean
+    height: 5.8   # flot
+    isEmployed: null   # Null
+    courses_enrolled:  # array
+      devops:
+        - docker
+        - k8s
+        - github actions
+      cloud: [aws, azure]
+---
+# Trainers data
+learners:
+  learner1:
+    name: murali   # dictionary type - learners.learner1.name
+    age: 30        # integer
+    email: "muralialakunlta3@gmail.com" # string
+```
+
+
+
+
+
+
+
+
+
+
