@@ -1,0 +1,8 @@
+name: Manual Trigger
+on: workflow_dispatch # manual trigger, troggered by user manually
+jobs:
+  MyJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing Manual Trigger
+        run: echo "manually triggerd"
