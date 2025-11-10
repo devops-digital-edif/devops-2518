@@ -1,0 +1,20 @@
+name: Scheduled Run
+on: 
+  schedule:
+    - cron: '30 2 * * *'        #'min hour day month weekDay' - time: UTC
+    - cron: '40 2 * * *'  
+    #  the cron exp is going to be in UTC time
+    # Indian Time: IST=05:30+UTC
+    # IST= 05:30 + 4:30 = 10AM
+    # Backup script 11:10AM IST -> UTC= 05:30-IST = 11:10 - 05:30 = 05:40AM  
+   # MIN: 0 to 59
+   # Hour: 0 to 23
+   # Day: 1 to 31
+   # Month: 1 to 12 or JAN, FEB to DEC
+   # DOW: 0 to 7, 0&7-SUN, 1-MON or SUN to SAT
+jobs:
+  backup: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: DB Backup
+        run: echo "DB Backup done"
