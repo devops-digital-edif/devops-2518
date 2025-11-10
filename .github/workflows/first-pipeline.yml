@@ -1,0 +1,12 @@
+name: First Workflow
+on: push  # trigger -used to on which event you want to run this workflow
+jobs:
+  build:
+    runs-on: ubuntu-latest # windows-latest, macos-latest - runners, managed by github
+    steps:
+      - name: clone code
+        run: echo "cloning is done"
+      - name: Install Build tools
+        run: echo "Build tool is installed"
+      - name: build the app
+        run: echo "Build is done"
