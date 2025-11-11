@@ -1,5 +1,12 @@
 name: Jobs and Steps
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        
+permissions:
+  contents: read
 jobs:
   build:     
     runs-on: ubuntu-latest  # s1, s4
