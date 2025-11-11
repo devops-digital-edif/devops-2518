@@ -1,0 +1,33 @@
+name: Jobs and Steps
+on: workflow_dispatch
+jobs:
+  build:     
+    runs-on: ubuntu-latest  # s1, s4
+    steps:
+      - name: greet
+        run: echo "welcome to Github Actions"
+      - name: create empty file
+        run: touch test.txt    # it will test.txt file
+      - name: list content
+        run: ls
+        
+  test:
+    needs: build 
+    runs-on: ubuntu-latest  # s2, s5
+    steps:
+      - name: list files
+        run: ls
+  deploy:
+    runs-on: ubuntu-latest  # s3, s6
+    steps:
+      - name: Clone Code
+        uses: actions/checkout@v6-beta  # clones same repo code
+      - name: list files
+        run: ls
+
+
+# jobs are independent in nature, they will run parallelly
+# in ordered to link the jobs we have 'needs' keyword to link
+# each job is going to run in different runner
+# job is a collections of steps
+# Steps are tasks or instructions. those instruction can be a shell command or a pre-built tasks
