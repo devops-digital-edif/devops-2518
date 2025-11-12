@@ -1,0 +1,12 @@
+name: variables demo
+on: workflow_dispatch
+env:
+  TRAINER: "Murali Krishna"  # Workflow Level Variable
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet
+        run: echo "hello world"
+      - name: Calling Workflow Level Variable
+        run: echo "The trainer name is $TRAINER"
