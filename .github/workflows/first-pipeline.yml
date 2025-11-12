@@ -1,5 +1,5 @@
 name: First Workflow
-on: push  # trigger -used to on which event you want to run this workflow
+on: workflow_dispatch  # trigger -used to on which event you want to run this workflow
 jobs:
   build:
     runs-on: ubuntu-latest # windows-latest, macos-latest - runners, managed by github
@@ -10,3 +10,5 @@ jobs:
         run: echo "Build tool is installed"
       - name: build the app
         run: echo "Build is done"
+      - name: call vars
+        run: echo "the trainer name is $TRAINER"
