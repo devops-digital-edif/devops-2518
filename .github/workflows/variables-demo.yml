@@ -10,3 +10,8 @@ jobs:
         run: echo "hello world"
       - name: Calling Workflow Level Variable
         run: echo "The trainer name is $TRAINER"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calling Workflow Level Variable
+        run: echo "The trainer is $TRAINER"
