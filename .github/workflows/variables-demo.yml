@@ -10,10 +10,18 @@ jobs:
     steps:
       - name: Calling Workflow Level Variable
         run: echo "The trainer name is $TRAINER"
+      - name: calling step level variable
+        run: echo "today topic details are $TOPIC"
+        env:
+          TOPIC: "Github Actions"    # step level variable
       - name: Calling Job level variable
         run: echo "the class name is $CLASS"
+      - name: call all vars
+        run: echo "the trainer is $TRAINER, Class is $CLASS and topic $TOPIC"
   deploy:
     runs-on: ubuntu-latest
+    env:
+      CLASS: "devops2518"
     steps:
       - name: Calling Workflow Level Variable
         run: echo "The trainer is $TRAINER"
