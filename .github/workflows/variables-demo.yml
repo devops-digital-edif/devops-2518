@@ -18,6 +18,8 @@ jobs:
         run: echo "the class name is $CLASS"
       - name: call all vars
         run: echo "the trainer is $TRAINER, Class is $CLASS and topic $TOPIC"
+      - name: calling repo variable
+        run: echo "the username is ${{vars.MY_USERNAME}}"
   deploy:
     runs-on: ubuntu-latest
     env:
