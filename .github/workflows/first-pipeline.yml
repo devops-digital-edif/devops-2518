@@ -14,3 +14,5 @@ jobs:
         run: echo "the trainer name is $TRAINER"
       - name: calling repo variable
         run: echo "the username is ${{vars.MY_USERNAME}}"
+      - name: call repo secret
+        run: echo "the password is ${{secrets.MY_PASSWORD}}"
