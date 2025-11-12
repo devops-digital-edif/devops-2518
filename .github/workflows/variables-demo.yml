@@ -5,13 +5,17 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CLASS: "devops-2518"  # Job level variable
     steps:
-      - name: greet
-        run: echo "hello world"
       - name: Calling Workflow Level Variable
         run: echo "The trainer name is $TRAINER"
+      - name: Calling Job level variable
+        run: echo "the class name is $CLASS"
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Calling Workflow Level Variable
         run: echo "The trainer is $TRAINER"
+      - name: Calling Job level variable
+        run: echo "the class is $CLASS"
