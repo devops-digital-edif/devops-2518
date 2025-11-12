@@ -27,3 +27,5 @@ jobs:
         run: echo "The trainer is $TRAINER"
       - name: Calling Job level variable
         run: echo "the class is $CLASS"
+      - name: calling default vars
+        run: echo "the workflow run number is $GITHUB_RUN_NUMBER"
