@@ -1,21 +1,9 @@
 name: Runners Demo
 on: workflow_dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: OS details
-        run: cat /etc/os-release
-  test:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: OS details
-        run: cat /etc/os-release
   deploy:
     runs-on: self-hosted
     steps:
-      - name: create dummy file
-        run: touch murali.txt
       - name: list files and location
         run: |
           pwd
