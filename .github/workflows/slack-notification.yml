@@ -10,5 +10,5 @@ jobs:
           webhook: ${{secrets.SLACK_WEBHOOK_URL}}
           webhook-type: incoming-webhook
           payload: |
-            channel: github-actions
+            channel: "github-actions"
             text: "Welcome to Github Actions"
