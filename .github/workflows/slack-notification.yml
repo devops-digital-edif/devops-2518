@@ -11,4 +11,4 @@ jobs:
           webhook-type: incoming-webhook
           payload: |
             channel: "github-demo"
-            text: "Welcome to Github Actions"
+            text: "Build Job started"
