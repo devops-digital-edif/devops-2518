@@ -4,7 +4,13 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: list files and location
+      - name: Install the Nginx
         run: |
-          pwd
-          ls
+          sudo apt install nginx -y
+          sudo rm -rf /var/wwww/html/*
+      - name: clone the code
+        run: git clone https://github.com/muralialakuntla3/ecomm.git
+      - name: Deploy Ecomm
+        run: sudo cp -rf ecomm/* /var/www/html/
+      - name: Restart Nginx
+        run: sudo systemctl restart nginx
