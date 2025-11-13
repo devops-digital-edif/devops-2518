@@ -1,0 +1,14 @@
+name: Slack Notification
+on: workflow_dispatch
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          webhook: "https://hooks.slack.com/services/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"
+          webhook-type: incoming-webhook
+          payload: |
+            channel: github-actions
+            text: "Welcome to Github Actions"
